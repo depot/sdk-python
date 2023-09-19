@@ -1,0 +1,34 @@
+{
+  "private": true,
+  "scripts": {
+    "fmt": "prettier --write .",
+    "fmt:check": "prettier --check .",
+    "generate": "buf generate buf.build/depot/api",
+    "type-check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@tsconfig/node18": "^18.2.2",
+    "@types/node": "^20.6.2",
+    "esbuild": "^0.19.3",
+    "esbuild-register": "^3.5.0",
+    "prettier": "^3.0.3",
+    "prettier-plugin-organize-imports": "^3.2.3",
+    "prettier-plugin-pkg": "^0.18.0",
+    "typescript": "^5.2.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "sideEffects": false,
+  "prettier": {
+    "printWidth": 120,
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "bracketSpacing": false,
+    "plugins": [
+      "prettier-plugin-organize-imports",
+      "prettier-plugin-pkg"
+    ]
+  }
+}
